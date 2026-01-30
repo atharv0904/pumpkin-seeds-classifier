@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pumpkin Classifier | Predict</title>
+  <link rel="stylesheet" href="/static/styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pumpkin Category Classifier</h1>
+    <p>Enter the pumpkin measurements below to predict its category.</p>
+
+    <form id="pumpkin-form" action="{{ url_for('routes.predict') }}" method="POST">
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Area</label>
+          <input type="number" name="Area" step="any" placeholder="e.g., 50234" required>
+        </div>
+
+        <div class="form-group">
+          <label>Perimeter</label>
+          <input type="number" name="Perimeter" step="any" placeholder="e.g., 812.45" required>
+        </div>
+
+        <div class="form-group">
+          <label>Major Axis Length</label>
+          <input type="number" name="Major_Axis_Length" step="any" placeholder="e.g., 398.21" required>
+        </div>
+
+        <div class="form-group">
+          <label>Minor Axis Length</label>
+          <input type="number" name="Minor_Axis_Length" step="any" placeholder="e.g., 212.87" required>
+        </div>
+
+        <div class="form-group">
+          <label>Convex Area</label>
+          <input type="number" name="Convex_Area" step="any" placeholder="e.g., 51002" required>
+        </div>
+
+        <div class="form-group">
+          <label>Equivalent Diameter</label>
+          <input type="number" name="Equiv_Diameter" step="any" placeholder="e.g., 252.36" required>
+        </div>
+
+        <div class="form-group">
+          <label>Eccentricity</label>
+          <input type="number" name="Eccentricity" step="any" placeholder="e.g., 0.81" required>
+        </div>
+
+        <div class="form-group">
+          <label>Solidity</label>
+          <input type="number" name="Solidity" step="any" placeholder="e.g., 0.94" required>
+        </div>
+
+        <div class="form-group">
+          <label>Extent</label>
+          <input type="number" name="Extent" step="any" placeholder="e.g., 0.72" required>
+        </div>
+
+        <div class="form-group">
+          <label>Roundness</label>
+          <input type="number" name="Roundness" step="any" placeholder="e.g., 0.89" required>
+        </div>
+
+        <div class="form-group">
+          <label>Aspect Ratio</label>
+          <input type="number" name="Aspect_Ration" step="any" placeholder="e.g., 1.87" required>
+        </div>
+
+        <div class="form-group">
+          <label>Compactness</label>
+          <input type="number" name="Compactness" step="any" placeholder="e.g., 0.86" required>
+        </div>
+
+      </div>
+      <button type="submit">Predict Category</button>
+    </form>
+  </div>
+</body>
+</html>

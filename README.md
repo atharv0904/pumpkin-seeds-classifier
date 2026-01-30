@@ -14,7 +14,9 @@ This project helps in automated seed classification and supports agricultural re
 
 ## Project Screenshots
 
+### Home Page
 
+![Home](screenshots/home.png)
 
 ### Prediction Page
 

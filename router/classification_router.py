@@ -18,19 +18,26 @@ model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 
 
+# 🔹 Landing Page
 @routes.route('/')
 def index():
     return render_template('index.html')
 
 
-@routes.route('/predict', methods=['POST'])
+# 🔹 Prediction Form Page
+@routes.route('/predict')
+def predict_page():
+    return render_template('predict.html')
+
+
+# 🔹 Prediction Logic
+@routes.route('/predict/result', methods=['POST'])
 def predict():
     try:
         input_data = []
 
         for feature in FEATURES:
-            value = request.form.get(feature)
-            input_data.append(float(value))
+            input_data.append(float(request.form.get(feature)))
 
         input_array = np.array([input_data])
         scaled_input = scaler.transform(input_array)
@@ -46,4 +53,4 @@ def predict():
 
     except Exception as e:
         flash(str(e))
-        return render_template('index.html')
+        return render_template('predict.html')
