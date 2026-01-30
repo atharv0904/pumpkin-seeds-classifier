@@ -18,8 +18,8 @@ This project helps in automated seed classification and supports agricultural re
 
 ### Prediction Page
 
-![Prediction](screenshots/predict 1.png)
-![Prediction](screenshots/predict 2.png)
+![Prediction](screenshots/predict1.png)
+![Prediction](screenshots/predict2.png)
 
 ### Result Page
 
