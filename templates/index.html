@@ -10,85 +10,73 @@
   <div class="container">
     <h1>Pumpkin Category Classifier</h1>
     <p>Enter the pumpkin measurements below to predict its category.</p>
-    <form id="pumpkin-form" action="/predict" method="POST">
+
+    <form id="pumpkin-form" action="{{ url_for('routes.predict') }}" method="POST">
       <div class="form-grid">
-        <!-- Repeat this block for each field -->
+
         <div class="form-group">
-          <label for="area">Area</label>
-          <input type="number" id="area" name="Area" placeholder="e.g., 50000" step="any" required>
-          <span class="error-message"></span>
+          <label>Area</label>
+          <input type="number" name="Area" step="any" placeholder="e.g., 50234" required>
         </div>
 
         <div class="form-group">
-          <label for="perimeter">Perimeter</label>
-          <input type="number" id="perimeter" name="Perimeter" placeholder="e.g., 800" step="any" required>
-          <span class="error-message"></span>
+          <label>Perimeter</label>
+          <input type="number" name="Perimeter" step="any" placeholder="e.g., 812.45" required>
         </div>
 
         <div class="form-group">
-          <label for="major_axis_length">Major Axis Length</label>
-          <input type="number" id="major_axis_length" name="Major_Axis_Length" placeholder="e.g., 400" step="any" required>
-          <span class="error-message"></span>
+          <label>Major Axis Length</label>
+          <input type="number" name="Major_Axis_Length" step="any" placeholder="e.g., 398.21" required>
         </div>
 
         <div class="form-group">
-          <label for="minor_axis_length">Minor Axis Length</label>
-          <input type="number" id="minor_axis_length" name="Minor_Axis_Length" placeholder="e.g., 200" step="any" required>
-          <span class="error-message"></span>
+          <label>Minor Axis Length</label>
+          <input type="number" name="Minor_Axis_Length" step="any" placeholder="e.g., 212.87" required>
         </div>
 
         <div class="form-group">
-          <label for="convex_area">Convex Area</label>
-          <input type="number" id="convex_area" name="Convex_Area" placeholder="e.g., 51000" step="any" required>
-          <span class="error-message"></span>
+          <label>Convex Area</label>
+          <input type="number" name="Convex_Area" step="any" placeholder="e.g., 51002" required>
         </div>
 
         <div class="form-group">
-          <label for="equiv_diameter">Equivalent Diameter</label>
-          <input type="number" id="equiv_diameter" name="Equiv_Diameter" placeholder="e.g., 250" step="any" required>
-          <span class="error-message"></span>
+          <label>Equivalent Diameter</label>
+          <input type="number" name="Equiv_Diameter" step="any" placeholder="e.g., 252.36" required>
         </div>
 
         <div class="form-group">
-          <label for="eccentricity">Eccentricity</label>
-          <input type="number" id="eccentricity" name="Eccentricity" placeholder="e.g., 0.8" step="any" required>
-          <span class="error-message"></span>
+          <label>Eccentricity</label>
+          <input type="number" name="Eccentricity" step="any" placeholder="e.g., 0.81" required>
         </div>
 
         <div class="form-group">
-          <label for="solidity">Solidity</label>
-          <input type="number" id="solidity" name="Solidity" placeholder="e.g., 0.95" step="any" required>
-          <span class="error-message"></span>
+          <label>Solidity</label>
+          <input type="number" name="Solidity" step="any" placeholder="e.g., 0.94" required>
         </div>
 
         <div class="form-group">
-          <label for="extent">Extent</label>
-          <input type="number" id="extent" name="Extent" placeholder="e.g., 0.7" step="any" required>
-          <span class="error-message"></span>
+          <label>Extent</label>
+          <input type="number" name="Extent" step="any" placeholder="e.g., 0.72" required>
         </div>
 
         <div class="form-group">
-          <label for="roundness">Roundness</label>
-          <input type="number" id="roundness" name="Roundness" placeholder="e.g., 0.9" step="any" required>
-          <span class="error-message"></span>
+          <label>Roundness</label>
+          <input type="number" name="Roundness" step="any" placeholder="e.g., 0.89" required>
         </div>
 
         <div class="form-group">
-          <label for="aspect_ration">Aspect Ratio</label>
-          <input type="number" id="aspect_ration" name="Aspect_Ration" placeholder="e.g., 2.0" step="any" required>
-          <span class="error-message"></span>
+          <label>Aspect Ratio</label>
+          <input type="number" name="Aspect_Ration" step="any" placeholder="e.g., 1.87" required>
         </div>
 
         <div class="form-group">
-          <label for="compactness">Compactness</label>
-          <input type="number" id="compactness" name="Compactness" placeholder="e.g., 0.85" step="any" required>
-          <span class="error-message"></span>
+          <label>Compactness</label>
+          <input type="number" name="Compactness" step="any" placeholder="e.g., 0.86" required>
         </div>
+
       </div>
       <button type="submit">Predict Category</button>
     </form>
-    <div id="form-error" class="form-error"></div>
   </div>
-  <script src="/scripts/script.js"></script>
 </body>
 </html>
