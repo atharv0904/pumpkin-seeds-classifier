@@ -14,14 +14,12 @@ This project helps in automated seed classification and supports agricultural re
 
 ## Project Screenshots
 
-### Home Page
 
-![Home](screenshots/home_page.png)
 
 ### Prediction Page
 
-![Prediction](screenshots/predict1.png)
-![Prediction](screenshots/predict2.png)
+![Prediction](screenshots/predict 1.png)
+![Prediction](screenshots/predict 2.png)
 
 ### Result Page
 
